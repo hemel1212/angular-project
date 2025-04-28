@@ -1,0 +1,73 @@
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="card">Dream-Fliters-Travel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="create-form">Apply Here</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="add-data">Output</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+
+  <div class="navs">
+    <div class="left">
+      <a href="/">Dream.Filters.Travel</a>
+    </div>
+    <div class="right">
+      <a data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" class="list-icon"><i class="bi bi-list menu-list"></i></a>
+      <ul class="d-flex justify-content-between">
+        <span class="d-flex gap-2">
+          <li><a routerLink="/card"><i class="bi bi-house-door"></i> Home</a></li>
+          <li><a routerLink="/transportation"><i class="bi bi-airplane"></i> Transportation</a></li>
+          <li><a routerLink="/stays"><i class="fa-solid fa-bed"></i> Stays</a></li>
+        </span>      
+        <div class="search-box">
+          <input type="text" placeholder="Search..." id="search" name="search">
+          <button type="submit"><i class="bi bi-search"></i></button>
+          <li><a routerLink="/add-data"><i class="bi bi-hourglass"></i> History</a></li>
+        </div>
+      </ul>
+    </div>
+   </div>
+
+   
+
+   <!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="sidebarMenuLabel">Menu</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link text-white" (click)="showContent('home')">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" (click)="showContent('about')">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" (click)="showContent('contact')">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="register">Register</a>
+      </li>
+    </ul>
+  </div>
+</div>

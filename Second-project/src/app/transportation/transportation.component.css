@@ -1,0 +1,123 @@
+/* .back3{
+    background-image: url("/images/back3.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  } */
+
+  /* Background for main section */
+.back3 {
+    background: linear-gradient(to right, #e0f7fa, #80deea);
+    min-height: 100vh;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Card styling */
+  .card {
+    border-radius: 15px;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 30px;
+  }
+  
+  /* Title */
+  .card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Label styling */
+  .form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Input and select styling */
+  .form-control,
+  .form-select {
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .form-control:focus,
+  .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+  }
+  
+  /* Button styling */
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    border-radius: 8px;
+  }
+  
+  /* Width for button (w-40 custom class) */
+  .btn.w-40 {
+    width: 40%;
+  }
+  
+  /* Responsive button width on smaller screens */
+  @media (max-width: 768px) {
+    .btn.w-40 {
+      width: 100%;
+    }
+  }
+  
+  /* Modal customizations */
+  .modal-content {
+    border-radius: 12px;
+    padding: 10px;
+  }
+  
+  .modal-header,
+  .modal-footer {
+    border: none;
+  }
+  
+  .modal-title {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .modal-body {
+    padding-top: 0;
+  }
+  
+  /* Radio buttons styling */
+  .form-check-label {
+    font-weight: 500;
+    margin-left: 8px;
+  }
+  
+  .form-check-input {
+    cursor: pointer;
+  }
+  

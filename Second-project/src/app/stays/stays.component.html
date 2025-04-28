@@ -1,0 +1,47 @@
+
+ <!-- <app-header></app-header> -->
+  <app-navber></app-navber>
+  <div class="back2">
+  <div class="container mt-5">
+    <div class="card shadow-lg">
+      <div class="card-body">
+        <h4 class="card-title mb-4">Hotel Booking Form</h4>
+  
+        <form >
+          <!-- Customer Name -->
+          <div class="mb-3">
+            <label for="customerName" class="form-label">Customer Name</label>
+            <input type="text" id="customerName" formControlName="customerName" class="form-control" placeholder="Enter your name">
+          </div>
+  
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" formControlName="email" class="form-control" placeholder="Enter your email">
+          </div>
+  
+          <!-- Phone Number -->
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" id="phone" formControlName="phone" class="form-control" placeholder="Enter your phone number">
+          </div>
+  
+          <!-- Check-in Date -->
+          <div class="mb-3">
+            <label for="checkIn" class="form-label">Check-in Date</label>
+            <input type="date" id="checkIn" formControlName="checkIn" class="form-control">
+          </div>
+  
+          <!-- Check-out Date -->
+          <div class="mb-3">
+            <label for="checkOut" class="form-label">Check-out Date</label>
+            <input type="date" id="checkOut" formControlName="checkOut" class="form-control">
+          </div>
+  
+          <!-- Submit Button -->
+          <button type="button" class="btn btn-primary w-100" (click)="submitForm()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

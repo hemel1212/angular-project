@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <h2 style="color: #fff; background-color: blueviolet;">Booking Information</h2>
+    @if(users.length>0){
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">NID</th>
+        <th scope="col">Phone </th>
+        <th scope="col">Address </th>
+        <th scope="col">Tour Details </th>
+        <th scope="col"> Button </th>
+      </tr>
+    </thead>
+    <tbody>
+        @for(user of users; track users){
+        <tr>
+          <td>{{users.indexOf(user)+1}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.nid}}</td>
+          <td>{{user.phone}}</td>
+          <td>{{user.address}}</td>
+          <td>{{user.place}} ({{user.rate}})</td>
+          <td>
+            
+              <button class="btn btn-success" style="margin: 0 15px;" (click)="editUser(user)">Update</button>
+              <button class="btn btn-danger" (click)="deleteSource(user)">Cancel</button>
+           
+          </td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  }@else {
+    <div class="alert">
+      <p>data not found</p>
+    </div>
+  }
+  </div>

@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="back">
+  <div class="container my-5 d-flex justify-content-center">
+    <div class="row" style="width: 400px">
+      <div class="card p-4">
+        <form>
+          <h3 class="mb-4" style="color: #1A237E">Login</h3>
+  
+          <div class="mb-3">
+            <label for="useremail" class="form-label">Email</label>
+            <input type="email" class="form-control" name="useremail" id="useremail">
+          </div>
+  
+          <div class="mb-3">
+            <label for="userpassword" class="form-label">Password</label>
+            <input type="password" class="form-control" name="userpassword" id="userpassword">
+          </div>
+  
+          <div class="mb-3 text-end">
+            <a routerLink="/recovery" class="text-decoration-none" style="color: #ff6f6c;">Forgot Password?</a>
+          </div>
+  
+          <button type="submit" class="btn btn-primary w-100" (click)="submitForm()" style="background-color: #ff6f6c; border: none;">
+            <i class="bi bi-box-arrow-in-right"></i>
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
