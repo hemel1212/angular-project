@@ -1,11 +1,26 @@
 <app-navber></app-navber>
- <!-- <app-header></app-header> -->
- <div class="back3">
- <div class="container mt-5">
+<!-- <app-header></app-header> -->
+<div class="back3">
+  <div class="container mt-5">
     <div class="card shadow-lg">
       <div class="card-body">
         <h4 class="card-title mb-4">Choose Your Route</h4>
-  
+
+        <!-- Travel Type Selection (OneWay / RoundTrip) -->
+        <div class="mb-4">
+          <label class="form-label">Select Travel Type</label>
+          <div class="r">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="oneWay" name="tripType" value="OneWay" formControlName="tripType">
+            <label class="form-check-label" for="oneWay">One Way</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="roundTrip" name="tripType" value="RoundTrip" formControlName="tripType">
+            <label class="form-check-label" for="roundTrip">Round Trip</label>
+          </div>
+        </div>
+        </div>
+
         <form>
           <!-- From and To -->
           <div class="row mb-3">
@@ -16,7 +31,7 @@
                 <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
               </select>
             </div>
-  
+
             <div class="col-md-6">
               <label for="to" class="form-label">To</label>
               <select id="to" formControlName="to" class="form-select">
@@ -25,81 +40,23 @@
               </select>
             </div>
           </div>
-  
+
           <!-- Travel and Return Dates -->
           <div class="row mb-3">
             <div class="col-md-6">
               <label for="travelDate" class="form-label">Travel Date</label>
               <input type="date" id="travelDate" formControlName="date" class="form-control">
             </div>
-  
+
             <div class="col-md-6">
               <label for="returnDate" class="form-label">Return Date (optional)</label>
               <input type="date" id="returnDate" formControlName="returnDate" class="form-control">
             </div>
           </div>
-  
-        <button type="button" class="btn btn-primary w-40" data-bs-toggle="modal" data-bs-target="#exampleModal"> Go To Next</button>
-
-          <!-- mode of transport modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <!-- Transport Mode Selection -->
-                  <!-- <div class="mb-3">
-                    <label class="form-label">Select Mode of Transport</label>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" id="bus" name="transport" formControlName="transport" value="Bus">
-                      <label class="form-check-label" for="bus"> By Bus </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" id="train" name="transport" formControlName="transport" value="Train">
-                      <label class="form-check-label" for="train">By Train</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" id="air" name="transport" formControlName="transport" value="Air">
-                      <label class="form-check-label" for="air">By Car</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" id="car" name="transport" formControlName="transport" value="Car">
-                      <label class="form-check-label" for="car">By Air</label>
-                    </div>
-                  </div> -->
-
-                  <div class="mb-3">
-                    <label class="form-label">Select Mode of Transport</label>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" id="bus" name="transport" formControlName="transport" value="Bus">
-                      <label class="form-check-label" for="bus">🚌 By Bus</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" id="train" name="transport" formControlName="transport" value="Train">
-                      <label class="form-check-label" for="train">🚆 By Train</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" id="air" name="transport" formControlName="transport" value="Air">
-                      <label class="form-check-label" for="air">🚗 By Car</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" id="car" name="transport" formControlName="transport" value="Car">
-                      <label class="form-check-label" for="car">✈️ By Air</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary" (click)="submitForm()">Submit</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </form>
+
+        <button type="button" class="btn btn-primary w-40" (click)="goToNext()"> Go To Next</button>
+
       </div>
     </div>
   </div>

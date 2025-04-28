@@ -1,0 +1,43 @@
+<app-navber></app-navber>
+<!-- mode of transport modal -->
+<div id="exampleModal">
+    <div class="n">
+      <div>
+        
+        <div class="n1">
+          <!-- Transport Mode Selection -->
+          <div class="mb-3">
+            <label class="form-label">Select Mode of Transport</label>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="bus" name="transport" formControlName="transport" value="Bus">
+              <label class="form-check-label" for="bus">🚌 By Bus</label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="train" name="transport" formControlName="transport" value="Train">
+              <label class="form-check-label" for="train">🚆 By Train</label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="air" name="transport" formControlName="transport" value="Air">
+              <label class="form-check-label" for="air">🚗 By Car</label>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="car" name="transport" formControlName="transport" value="Car">
+              <label class="form-check-label" for="car">✈️ By Air</label>
+            </div>
+          </div>
+        </div>
+  
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeForm()">Close</button>
+          <button type="button" class="btn btn-primary" (click)="submitForm()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<p>type works!</p>
