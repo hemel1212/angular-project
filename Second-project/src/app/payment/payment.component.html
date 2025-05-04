@@ -1,0 +1,30 @@
+
+<app-navber></app-navber>
+<div class="payment-container">
+  <h2>💳 Payment Page</h2>
+
+  <form>
+    <div class="form-group">
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456">
+    </div>
+
+    <div class="form-group">
+      <label for="cardName">Cardholder Name</label>
+      <input type="text" id="cardName" class="form-control" placeholder="John Doe">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="expiry">Expiry</label>
+        <input type="text" id="expiry" class="form-control" placeholder="MM/YY">
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV</label>
+        <input type="password" id="cvv" class="form-control" placeholder="123">
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-success mt-3" (click)="payNow()">Pay Now</button>
+  </form>
+</div>

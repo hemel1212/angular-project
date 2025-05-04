@@ -10,8 +10,8 @@ import { NavberComponent } from "../transportation/navber/navber.component";
 export class StaysComponent {
 
   submitForm() {
-    alert("Hotel booking successful!");
-    window.location.href="stays";
+    alert("Are  you sure to booked this room");
+    window.location.href="payment";
   }
 
 }

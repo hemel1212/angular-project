@@ -41,6 +41,31 @@
       <a href="create-form?place=Singapur&rate=85000" class="btn btn-primary">Booked Now</a>
     </div>
   </div>
+<!--add card-->
+<button class="btn btn-success" type="submit" (click)="onsubmit()">Add</button>
+  <div *ngIf="showAddCardForm" class="add-card-form" style="margin: 20px;">
+    <h3>Add New Card</h3>
+    <form (ngSubmit)="addCard()">
+      <div>
+        <label>Place Name:</label>
+        <input type="text" [(ngModel)]="newCard.place" name="placeName" required>
+      </div>
+      <div>
+        <label>Price (Tk):</label>
+        <input type="number" [(ngModel)]="newCard.rate" name="rateAmount" required>
+      </div>
+      <div>
+        <label>Description:</label>
+        <textarea [(ngModel)]="newCard.description" name="cardDescription" required></textarea>
+      </div>
+      <div>
+        <label>Image URL:</label>
+        <input type="text" [(ngModel)]="newCard.image" name="imageUrl" required>
+      </div>
+      
+    </form>
+  </div>
+  
 </div>
 </div>
 

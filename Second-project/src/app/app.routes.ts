@@ -9,6 +9,8 @@ import { HotelComponent } from './stays/hotel/hotel.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { TypeComponent } from './transportation/type/type.component';
+import { PaymentComponent } from './payment/payment.component';
+import { TourGuidesComponent } from './tour-guides/tour-guides.component';
 
 
 export const routes: Routes = [
@@ -22,6 +24,8 @@ export const routes: Routes = [
     { path: 'stay-form', component: StaysComponent },   
     { path: 'login', component: LoginComponent },   
     { path: 'register', component: RegisterComponent },  
-    { path: 'type', component: TypeComponent } 
+    { path: 'type', component: TypeComponent },
+    { path: 'payment', component: PaymentComponent},
+    { path: 'tour-guides', component: TourGuidesComponent}
    
 ];

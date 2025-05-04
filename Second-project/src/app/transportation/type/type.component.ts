@@ -12,7 +12,7 @@ export class TypeComponent {
   submitForm() {
     alert("Are  you sure to buy this Ticket?");
     // window.location.reload();
-    window.location.href="card";
+    window.location.href="payment";
    }
 
    closeForm(){
