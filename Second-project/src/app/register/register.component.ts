@@ -13,4 +13,6 @@ export class RegisterComponent {
     alert("Successful Register...");
     window.location.href="card";
   }
+
+
 }

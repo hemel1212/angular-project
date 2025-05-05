@@ -1,28 +1,36 @@
 <app-navber></app-navber>
-<!-- <app-header></app-header> -->
+
 <div class="back3">
   <div class="container mt-5">
     <div class="card shadow-lg">
       <div class="card-body">
         <h4 class="card-title mb-4">Choose Your Route</h4>
 
-        <!-- Travel Type Selection (OneWay / RoundTrip) -->
-        <div class="mb-4">
-          <label class="form-label">Select Travel Type</label>
-          <div class="r">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" id="oneWay" name="tripType" value="OneWay" formControlName="tripType">
-            <label class="form-check-label" for="oneWay">One Way</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" id="roundTrip" name="tripType" value="RoundTrip" formControlName="tripType">
-            <label class="form-check-label" for="roundTrip">Round Trip</label>
-          </div>
-        </div>
+        <!-- Trip Type Selection -->
+        <div class="mb-3">
+          <label class="me-3">
+            <input
+              type="radio"
+              name="tripType"
+              value="oneway"
+              (change)="onTripTypeChange('oneway')"
+              checked
+            />
+            One Way
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="tripType"
+              value="roundtrip"
+              (change)="onTripTypeChange('roundtrip')"
+            />
+            Round Trip
+          </label>
         </div>
 
+        <!-- From and To Dropdowns -->
         <form>
-          <!-- From and To -->
           <div class="row mb-3">
             <div class="col-md-6">
               <label for="from" class="form-label">From</label>
@@ -40,23 +48,39 @@
               </select>
             </div>
           </div>
-
-          <!-- Travel and Return Dates -->
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label for="travelDate" class="form-label">Travel Date</label>
-              <input type="date" id="travelDate" formControlName="date" class="form-control">
-            </div>
-
-            <div class="col-md-6">
-              <label for="returnDate" class="form-label">Return Date (optional)</label>
-              <input type="date" id="returnDate" formControlName="returnDate" class="form-control">
-            </div>
-          </div>
         </form>
 
-        <button type="button" class="btn btn-primary w-40" (click)="goToNext()"> Go To Next</button>
+        <!-- Conditional Inputs -->
+        <div *ngIf="tripType === 'oneway'" class="mb-3">
+          <label>
+            Travel Date:
+            <input type="date" name="travelDate" class="form-control" />
+          </label>
+        </div>
 
+        <div *ngIf="tripType === 'roundtrip'" class="mb-3">
+          <div class="row">
+            <div class="col-md-6">
+              <label>
+                Travel Date:
+                <input type="date" name="travelDate" class="form-control" />
+              </label>
+            </div>
+            <div class="col-md-6">
+              <label>
+                Return Date:
+                <input type="date" name="returnDate" class="form-control" />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Button -->
+        <div class="n3 mt-4">
+          <button type="button" class="btn btn-primary w-40" (click)="goToNext()">
+            Go To Next
+          </button>
+        </div>
       </div>
     </div>
   </div>

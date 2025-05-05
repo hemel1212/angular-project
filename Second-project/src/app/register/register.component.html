@@ -7,7 +7,12 @@
           <h3 class="mb-4" style="color: #1A237E">Create an Account</h3>
   
           <div class="mb-3">
-            <label for="username" class="form-label">Full Name</label>
+            <label for="username" class="form-label">First Name</label>
+            <input type="text" class="form-control" name="username" id="username">
+          </div>
+
+          <div class="mb-3">
+            <label for="username" class="form-label">Last Name</label>
             <input type="text" class="form-control" name="username" id="username">
           </div>
   
@@ -15,11 +20,25 @@
             <label for="useremail" class="form-label">Email</label>
             <input type="email" class="form-control" name="useremail" id="useremail">
           </div>
+
+          <div class="mb-3">
+            <label for="usernumber" class="form-label">Number</label>
+            <input type="number" class="form-control" name="usernumber" id="usernumber">
+          </div>
   
           <div class="mb-3">
             <label for="userpassword" class="form-label">Password</label>
             <input type="password" class="form-control" name="userpassword" id="userpassword">
           </div>
+
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+            <!-- <div *ngIf="confirmPassword !== user.password && registrationForm.controls['confirmPassword']?.touched"
+                class="text-danger">
+                Passwords do not match.
+            </div> -->
+        </div>
   
           <button type="submit" class="btn btn-primary w-100" (click)="submitForm()" style="background-color: #ff6f6c; border: none;">
             <i class="bi bi-person-plus-fill"></i>

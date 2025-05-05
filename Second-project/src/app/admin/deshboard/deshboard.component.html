@@ -1,0 +1,43 @@
+
+  <main class="main-content">
+    <header>
+      <h1>Welcome to the Dashboard</h1>
+      <div class="stats">
+        <div class="stat-card">
+          <h3>Bookings Today</h3>
+          <p>{{ bookingsToday }}</p>
+        </div>
+        <div class="stat-card">
+          <h3>Active Users</h3>
+          <p>{{ activeUsers }}</p>
+        </div>
+        <div class="stat-card">
+          <h3>Revenue</h3>
+          <p>${{ revenue }}</p>
+        </div>
+      </div>
+    </header>
+  
+    <section class="recent-activities">
+      <h2>Recent Activities</h2>
+      <ul>
+        <li *ngFor="let activity of recentActivities">
+          <span>{{ activity.time }}</span>
+          <span>{{ activity.description }}</span>
+        </li>
+      </ul>
+    </section>
+  
+    <section class="popular-destinations">
+      <h2>Popular Destinations</h2>
+      <div class="destination-cards">
+        <div class="destination-card" *ngFor="let destination of destinations">
+          <img [src]="destination.image" alt="{{ destination.name }}">
+          <h3>{{ destination.name }}</h3>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+

@@ -5,7 +5,7 @@ import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-add-data',
-  imports: [HeaderComponent],
+  imports: [],
   templateUrl: './add-data.component.html',
   styleUrl: './add-data.component.css'
 })

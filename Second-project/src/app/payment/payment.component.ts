@@ -10,13 +10,16 @@ import { NavberComponent } from '../transportation/navber/navber.component';
 export class PaymentComponent {
 
   payNow() {
-    // alert('Payment successful! Ticket booked.');
-    confirm('Are you sure to pay now?');
-    // Redirect to confirmation or home
-    window.location.href="card";
-  }
+    const userConfirmed = confirm('Are you sure to pay now?');
+    
+    if (userConfirmed) {
+      // User clicked OK - redirect to home
+      window.location.href = "card"; // Replace "home" with your actual home page URL
+    } else {
+      // User clicked Cancel - stay on the same page (do nothing)
+      return;
+    }
   
+ }
+
 }
-
-
-
